@@ -21,7 +21,7 @@ def list_profiles(account, property):
           accountId=account,
           webPropertyId=property).execute()
 	df = pd.read_json(json.dumps(profiles.get('items')))
-	return df
+	return df[['accountId', 'id', 'name']]
 
 def get_example(profile_id):
 	return ga_to_df(service.data().ga().get(

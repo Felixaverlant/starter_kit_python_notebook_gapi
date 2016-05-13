@@ -3,7 +3,7 @@ A starter kit to use google analytics api in a jupyter notebook.
 
 # How-to
 - Add a client_secrets.json in root folder. More info : https://console.developers.google.com/.
-- ```jupyter notebook``
+- ```jupyter notebook```
 
 # Dependancies 
 - pandas
