@@ -36,3 +36,12 @@ def ga_to_df(d):
 	columns = [x['name'] for x in d['columnHeaders']]
 	rows = [x for x in d['rows']]
 	return pd.DataFrame(rows, columns=columns)
+
+def raw_query(profile_id, start_date, end_date,metrics,dimensions):
+	return service.data().ga().get(
+		ids='ga:' + profile_id,
+		start_date=start_date,
+		end_date=end_date,
+		metrics=metrics,
+		dimensions=dimensions
+	).execute()
